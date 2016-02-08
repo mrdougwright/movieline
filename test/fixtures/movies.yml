@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  year: 1
+  release_date: 2016-02-08 02:59:51
+  critics_score: 1
+  rt_id: MyString
+
+two:
+  title: MyString
+  year: 1
+  release_date: 2016-02-08 02:59:51
+  critics_score: 1
+  rt_id: MyString
