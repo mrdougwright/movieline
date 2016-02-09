@@ -7,14 +7,15 @@ class ActorsController < ApplicationController
       @message = e.message
     end
 
-    respond_to do |format|
-      format.html { redirect_to actor_path(@actor) } if @actor
-      format.html { render json: @message }
+    if @actor
+      respond_to { |f| f.html { redirect_to actor_path(@actor) } }
+    else
+      respond_to { |f| f.html { render json: @message } }
     end
   end
 
   def show
     @actor = Actor.find(params[:id])
-    @movies = Tmdb::Person.credits(@actor.tmdb_id)['cast']
+    @movies = FindCreateMovies.with_actor_tmdb_id(@actor.tmdb_id)
   end
 end

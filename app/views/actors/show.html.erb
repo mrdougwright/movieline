@@ -4,7 +4,5 @@
 ID: <%= @actor.tmdb_id %>
 
 <h3>Movies</h3>
-<% @movies.each do |movie| %>
-  <%= movie['release_date'] %>
-  <%= movie['original_title'] %><br>
-<% end %>
+
+<%= line_chart @movies.map{|movie| {name: movie.title, data: {movie.release_date => movie.vote_average} } } %>
