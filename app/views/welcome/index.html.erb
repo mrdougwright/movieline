@@ -1,3 +1,10 @@
 <h2>Movie Timeline</h2>
 
-<p>Coming Soon</p>
+<br>
+
+<%= form_for @actor do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit "Find Actor" %>
+<% end %>
+
+<!-- https://api.themoviedb.org/3/search/person?query=%27Brad%20Pitt%27&api_key=5c8ad3fe0676ab015002346a388637ba -->
