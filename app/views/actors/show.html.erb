@@ -1,3 +1,10 @@
 <h1>Actor</h1>
 
-<%= @actor.pretty_name %>
+<%= @actor.pretty_name %><br>
+ID: <%= @actor.tmdb_id %>
+
+<h3>Movies</h3>
+<% @movies.each do |movie| %>
+  <%= movie['release_date'] %>
+  <%= movie['original_title'] %><br>
+<% end %>
