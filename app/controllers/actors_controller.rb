@@ -18,4 +18,8 @@ class ActorsController < ApplicationController
     @actor = Actor.find(params[:id])
     @movies = FindCreateMovies.with_actor_tmdb_id(@actor.tmdb_id)
   end
+
+  def index
+    @actors = Actor.all
+  end
 end

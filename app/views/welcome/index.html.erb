@@ -1,8 +1,11 @@
-<h2>Movie Timeline</h2>
+<div class='center'>
+  <h1>Movie Line</h1>
 
-<br>
+  <br>
+  <p>Welcome to Movie Line, where you can graph an actor's movies by time and rating.</p>
 
-<%= form_for @actor do |f| %>
-  <%= f.text_field :name %>
-  <%= f.submit "Find Actor" %>
-<% end %>
+  <%= form_for @actor do |f| %>
+    <%= f.text_field :name %>
+    <%= f.submit "Find Actor" %>
+  <% end %>
+</div>

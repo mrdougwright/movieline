@@ -1,0 +1,16 @@
+<h1>Movies</h1>
+
+<table>
+  <tbody class='movie-index'>
+    <th>Title</th>
+    <th>Release Date</th>
+    <th>Popularity</th>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.title %></td>
+        <td><%= pretty_date movie.release_date %></td>
+        <td><%= movie.vote_average %></td>
+      </tr>
+    <% end %>
+  <tbody>
+</table>
