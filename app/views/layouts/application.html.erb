@@ -9,10 +9,10 @@
 </head>
 
 <body class='bg-washed-yellow hot-pink'>
-  <nav class='fl w-100 pa2'>
-    <%= link_to 'Actors', actors_path unless actors_url == request.original_url %>
-    <%= link_to 'Movies', movies_path unless movies_url == request.original_url %>
-    <%= link_to 'Search', root_path unless root_url == request.original_url %>
+  <nav class='fl w-100 pa3'>
+    <%= link_to 'Actors', actors_path, class: "link navy-70 dim pa2 no-underline"%>
+    <%= link_to 'Movies', movies_path, class: "link navy-70 dim pa2 no-underline"%>
+    <%= link_to 'Search', root_path,   class: "link navy-70 dim pa2 no-underline"  %>
   </nav>
 
   <main class='fl w-80 pa5'>

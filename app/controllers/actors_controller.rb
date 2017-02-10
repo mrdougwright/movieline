@@ -10,7 +10,7 @@ class ActorsController < ApplicationController
     if @actor
       respond_to { |f| f.html { redirect_to actor_path(@actor) } }
     else
-      respond_to { |f| f.html { render json: @message } }
+      respond_to { |f| f.html { redirect_to root_path(error: "Can't find actor by that name...") } }
     end
   end
 

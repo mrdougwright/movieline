@@ -1,16 +1,24 @@
 <h1>Movies</h1>
 
-<table>
-  <tbody class='movie-index'>
-    <th>Title</th>
-    <th>Release Date</th>
-    <th>Popularity</th>
+<section class='movie-index'>
+  <ul class="list p10">
+    <h2 class="dark-blue">
+      <li class="lh-copy pv1">
+        <span>Title</span>
+        <span class='fr'>
+          <span>Release Date</span>&nbsp;
+          <span>Popularity</span>
+        </span>
+      </li>
+    </h2>
     <% @movies.each do |movie| %>
-      <tr>
-        <td><%= movie.title %></td>
-        <td><%= pretty_date movie.release_date %></td>
-        <td><%= movie.vote_average %></td>
-      </tr>
+      <li class="lh-copy pv1 ba bl-0 bt-0 br-0 b--dotted b--black-30">
+        <span><%= movie.title %></span>
+        <span class="fr">
+          <span class="pr4"><%= pretty_date movie.release_date %></span>
+          <span class=""><%= movie.vote_average || 0.0 %></span>
+        </span>
+      </li>
     <% end %>
-  <tbody>
-</table>
+  </ul>
+</section>
