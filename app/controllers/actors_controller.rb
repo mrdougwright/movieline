@@ -20,6 +20,6 @@ class ActorsController < ApplicationController
   end
 
   def index
-    @actors = Actor.all
+    @actors = Actor.all.order(popularity: :desc)
   end
 end

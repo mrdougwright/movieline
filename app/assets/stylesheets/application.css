@@ -12,21 +12,5 @@
  *
  *= require_tree .
  *= require_self
+ *= require tachyons
  */
-
-body {
-  margin: 20px;
-}
-
-.center {
-  text-align: center;
-  margin: 0 auto;
-}
-
-tbody {
-  text-align: left;
-}
-
-tbody th, td {
-  padding: 5px 10px;
-}

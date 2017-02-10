@@ -8,13 +8,16 @@
   <%= csrf_meta_tags %>
 </head>
 
-<body>
-  <nav>
+<body class='bg-washed-yellow hot-pink'>
+  <nav class='fl w-100 pa2'>
     <%= link_to 'Actors', actors_path unless actors_url == request.original_url %>
     <%= link_to 'Movies', movies_path unless movies_url == request.original_url %>
     <%= link_to 'Search', root_path unless root_url == request.original_url %>
   </nav>
-  <%= yield %>
+
+  <main class='fl w-80 pa5'>
+    <%= yield %>
+  </main>
 
 </body>
 </html>
